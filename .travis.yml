@@ -1,0 +1,17 @@
+language: go
+
+go:
+  - 1.4
+  - tip
+
+install: true # don't attempt go-get
+
+script:
+  - go install
+  - go test -v
+  - go test -bench .
+
+notifications:
+  email: false
+
+
